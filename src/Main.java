@@ -6,6 +6,9 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
+        task8();
+
     }
 
 
@@ -30,7 +33,7 @@ public class Main {
         System.out.println("\nЗадача 2");
 
         double a = 27.12;
-        long b = 987678965549;
+        long b = 987678965549L;
         float c = 2.786f;
         short d = 569;
         short e = -159;
@@ -76,7 +79,7 @@ public class Main {
     }
 
     public static void task5() {
-        System.out.println("Задача 5");
+        System.out.println("\nЗадача 5");
         byte allCans = 120;
         byte whiteCans = 2;
         byte brownCans = 4;
@@ -90,7 +93,47 @@ public class Main {
 
 
     public static void task6() {
-            System.out.println("Задача 6");
+            System.out.println("\nЗадача 6");
+
+            byte banana = 5;
+            byte bananaWeight = 80;
+            double milk = 200;
+            byte milkWeight = 105;
+            byte iceCream = 2;
+            byte iceCreamWeight = 100;
+            byte egs = 4;
+            byte egsWeight = 70;
+            milk = milk / milkWeight;
+
+            double mix = banana * bananaWeight + milk * milkWeight + iceCream * iceCreamWeight + egs * egsWeight;
+        System.out.println( "Вес коктеля в граммах составил " + mix);
+        System.out.println( "Вес коктеля в килограммах составил " + ( mix / 1000 ));
+
+    }
+    public static void task7 () {
+        System.out.println("\nЗадача 7");
+        int weight = 7;
+        weight =weight * 1000;
+        short loseWeight250 = 250;
+        short loseWeight500 = 500;
+        int days = 0;
+
+        days = weight / loseWeight250;
+        System.out.println("Для того чтобы похудеть на " + (weight / 1000) + " кг сбрасывая по " + loseWeight250 + " грамм нужно потратить " + days  + " дней" );
+
+        days = weight / loseWeight500;
+        System.out.println("Для того чтобы похудеть на " + (weight / 1000) + " кг сбрасывая по " + loseWeight500 + " грамм нужно потратить " + days  + " дней" );
+
+        days = (weight / loseWeight250 + weight / loseWeight500) / 2;
+        System.out.println("Для того чтобы похудеть на " + (weight / 1000) + " кг, любым из этих способов, нужно потратить " + days  + " дня" );
+
+
+
+    }
+
+    public static void task8 () {
+        System.out.println("\nЗадача 8");
+
 
     }
 
