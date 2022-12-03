@@ -134,11 +134,34 @@ public class Main {
     public static void task8 () {
         System.out.println("\nЗадача 8");
 
+        int monthSalary = 1;
+        byte workingTime = 1;
+        int salaryPerYear = monthSalary * 12;
+        int monthSalaryNew = 1;
+        float salaryIncrease = 1.1F;
+
+        if (workingTime >= 3) { monthSalaryNew = (int) (monthSalary * salaryIncrease);
+        } else {
+            System.out.println("Зарплата остаётся " + monthSalary);}
+
+
+
+
+        int denis = 83690;
+        int kristina = 76230;
+        byte workingTimeKristina = 3;
+
+
+
+
+
+
+
+
+
+
 
     }
-
-
-
 
 
 }
