@@ -136,27 +136,29 @@ public class Main {
     public static void task8 () {
         System.out.println("\nЗадача 8");
 
-        Scanner in = new Scanner(System.in);
-        System.out.println("Введите имя работника");
-        var name = in.next();
+                    Scanner in = new Scanner(System.in);
+            System.out.println("Введите имя работника");
+            var name = in.next();
 
-        Scanner in1 = new Scanner(System.in);
-        System.out.println("Введите зарплату в месяц");
-        int monthSalary = in1.nextInt();
+            Scanner in1 = new Scanner(System.in);
+            System.out.println("Введите зарплату в месяц");
+            int monthSalary = in1.nextInt();
 
-        Scanner in2 = new Scanner(System.in);
-        System.out.println("Введите стаж работы в годах");
-        byte workingTime = in2.nextByte();
+            Scanner in2 = new Scanner(System.in);
+            System.out.println("Введите стаж работы в годах");
+            byte workingTime = in2.nextByte();
 
-        int salaryPerYear = monthSalary * 12;
-        float salaryIncrease = 1.1F;
+            int salaryPerYear = monthSalary * 12;
+            float salaryIncrease = 1.1F;
 
-        if (workingTime >= 3) {
-            double monthSalaryNew = monthSalary * salaryIncrease;
-            System.out.println("Зарплату " + name + " повысили и теперь она будет составлять " + monthSalaryNew + " рублей в месяц");
-            System.out.println("По сравнению с прошлым годом наши расходы на оплату труда за год увеличатся на " + salaryPerYear % (monthSalaryNew * 12));
-        } else {
-            System.out.println("Зарплата остаётся " + monthSalary);}
+            if (workingTime >= 3) {
+                double monthSalaryNew = monthSalary * salaryIncrease;
+                System.out.println("Зарплату " + name + " повысили и теперь она будет составлять " + monthSalaryNew + " рублей в месяц");
+                System.out.println("По сравнению с прошлым годом наши расходы на оплату труда за год увеличатся на " + salaryPerYear % (monthSalaryNew * 12));
+            } else {
+                System.out.println("Зарплата остаётся " + monthSalary);
+
+            }
 
 
 
