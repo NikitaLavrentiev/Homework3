@@ -1,3 +1,4 @@
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -118,9 +119,8 @@ public class Main {
         weight =weight * 1000;
         short loseWeight250 = 250;
         short loseWeight500 = 500;
-        int days = 0;
 
-        days = weight / loseWeight250;
+        int days = weight / loseWeight250;
         System.out.println("Для того чтобы похудеть на " + (weight / 1000) + " кг сбрасывая по " + loseWeight250 + " грамм нужно потратить " + days  + " дней" );
 
         days = weight / loseWeight500;
@@ -136,29 +136,36 @@ public class Main {
     public static void task8 () {
         System.out.println("\nЗадача 8");
 
-                    Scanner in = new Scanner(System.in);
-            System.out.println("Введите имя работника");
+        while (true) {
+            Scanner in = new Scanner(System.in);
+            System.out.println("Введите имя работника или Стоп");
             var name = in.next();
+            if (!Objects.equals(name, "Стоп")) {
 
-            Scanner in1 = new Scanner(System.in);
-            System.out.println("Введите зарплату в месяц");
-            int monthSalary = in1.nextInt();
+                Scanner in1 = new Scanner(System.in);
+                System.out.println("Введите зарплату в месяц");
+                int monthSalary = in1.nextInt();
 
-            Scanner in2 = new Scanner(System.in);
-            System.out.println("Введите стаж работы в годах");
-            byte workingTime = in2.nextByte();
+                Scanner in2 = new Scanner(System.in);
+                System.out.println("Введите стаж работы в годах");
+                byte workingTime = in2.nextByte();
 
-            int salaryPerYear = monthSalary * 12;
-            float salaryIncrease = 1.1F;
+                int salaryPerYear = monthSalary * 12;
+                float salaryIncrease = 1.1F;
 
-            if (workingTime >= 3) {
-                double monthSalaryNew = monthSalary * salaryIncrease;
-                System.out.println("Зарплату " + name + " повысили и теперь она будет составлять " + monthSalaryNew + " рублей в месяц");
-                System.out.println("По сравнению с прошлым годом наши расходы на оплату труда за год увеличатся на " + salaryPerYear % (monthSalaryNew * 12));
+                if (workingTime >= 3) {
+                    double monthSalaryNew = monthSalary * salaryIncrease;
+                    System.out.println("Зарплату " + name + " повысили и теперь она будет составлять " + monthSalaryNew + " рублей в месяц");
+                    System.out.println("По сравнению с прошлым годом наши расходы на оплату труда за год увеличатся на " + (monthSalaryNew * 12 - salaryPerYear));
+                } else {
+                    System.out.println("Зарплата остаётся " + monthSalary);
+
+                }
             } else {
-                System.out.println("Зарплата остаётся " + monthSalary);
-
+                System.out.println("Конец цикла");
+                break;
             }
+        }
 
 
 
