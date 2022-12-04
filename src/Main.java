@@ -162,7 +162,7 @@ public class Main {
 
                 }
             } else {
-                System.out.println("Конец цикла");
+                System.out.println("Всем спасибо, до встречи в новом году!");
                 break;
             }
         }
